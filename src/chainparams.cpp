@@ -79,7 +79,7 @@ public:
         consensus.BIP34Hash = uint256S("");
         consensus.BIP65Height = 65000; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 65000; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
-        consensus.powLimit = uint256S("0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
+        consensus.powLimit = uint256S("0x0"); 
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         consensus.nPowTargetSpacing = 5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -126,7 +126,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x8778698a598e66b06ecf1ff9cd27b3ffb0cf8623d0c15a0e4b00451bcb43ec6c"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        
+        printf("%s\n",genesis.ToString().c_str());
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
