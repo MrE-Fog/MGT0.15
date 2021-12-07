@@ -122,8 +122,8 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         //logging.info("Genesis Block Hash " + consensus.hashGenesisBlock);
         //logging.info("Compared to Hash " + uint256S("0x64cee94f3a39e33e25d5d294d9c12e821177f7981ca9b398258aebc88133fbfb"));
-        //assert(consensus.hashGenesisBlock == uint256S("0x64cee94f3a39e33e25d5d294d9c12e821177f7981ca9b398258aebc88133fbfb"));
-        //assert(genesis.hashMerkleRoot == uint256S("0x3f04ac1c2a1fba3695a7947d60056dc77c9750bb456b56e2cdaeff0b308991609"));
+        assert(consensus.hashGenesisBlock == uint256S("0x18332be7e976ca0b1aff4f7bc2ca031274fa30bdd7162cfbefbfd2423566ff12"));
+        assert(genesis.hashMerkleRoot == uint256S("0x8778698a598e66b06ecf1ff9cd27b3ffb0cf8623d0c15a0e4b00451bcb43ec6c"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         printf("%s\n",genesis.ToString().c_str());
@@ -207,7 +207,7 @@ public:
         genesis = CreateGenesisBlock(1486949366, 293345, 0x1e0ffff0, 1, 90 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x3f04ac1c2a1fba3695a7947d60056dc77c9750bb456b56e2cdaeff0b308991609"));
+        assert(genesis.hashMerkleRoot == uint256S("0x8778698a598e66b06ecf1ff9cd27b3ffb0cf8623d0c15a0e4b00451bcb43ec6c"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
