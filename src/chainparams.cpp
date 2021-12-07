@@ -126,7 +126,7 @@ public:
         //assert(genesis.hashMerkleRoot == uint256S("0x3f04ac1c2a1fba3695a7947d60056dc77c9750bb456b56e2cdaeff0b308991609"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        printf("%s\n",genesis.ToString().c_str())
+        printf("%s\n",genesis.ToString().c_str());
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
